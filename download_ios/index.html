@@ -1,67 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>下载</title>
-  <style>
-    body {
-      background-image: url(bg.jpg);
-      /* 背景图垂直、水平均居中 */
-      background-position: center center;
-      /* 背景图不平铺 */
-      background-repeat: no-repeat;
-      /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-      background-attachment: fixed;
-      /* 让背景图基于容器大小伸缩 */
-      background-size: cover;
-      position: relative;
-    }
-    .download {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5%;
-      display: block;
-      position: relative;
-      width: 209px;
-      height: 44px;
-      z-index: 1001;
-      border: 1px solid #fff;
-      border-radius: 20px;
-      color: #fff;
-      font-size: 20px;
-      line-height: 44px;
-      text-align: center;
-      text-decoration: none;
-      background: transparent;
-    }
-    .title {
-      margin-top: 95%;
-      margin-left: auto;
-      margin-right: auto;
-      display: block; 
-      width: 148px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .title p {
-      color: #fff;
-      font-size: 20px;
-    }
-    .title img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-  <div class="title">
-    <img src="logo.png" alt="">
-    <p>小宇监工</p>
-  </div>
-  <button type="submit" class="download" onclick="location='itms-services://?action=download-manifest&url=https://api.vrbig.com/assets/img/ios/xiaoyu.plist'">iOS正式版本</button>
+
 </body>
+<script type="text/javascript">
+    window.onload = function () {
+        var type = navigator.appName
+        if (type == "Netscape") {
+            var lang = navigator.language
+        }
+        else {
+            var lang = navigator.userLanguage
+        }
+        //取得浏览器语言的前两个字母
+        var lang = lang.substr(0, 2)
+        // 英语
+        if (lang == "en") {
+            window.location.href = "en.html"
+        }
+        // 中文 - 不分繁体和简体
+        else if (lang == "zh") {
+             window.location.href="zh.html"
+            //  注释掉了上面跳转,不然会陷入无限循环
+        }
+        // 除上面所列的语言
+        else {
+            window.location.href = "en.html"
+        }
+    }
+</script>
+
 </html>
