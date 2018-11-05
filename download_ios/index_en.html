@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Download</title>
+  <style>
+    body {
+      background-image: url(bg.jpg);
+      /* 背景图垂直、水平均居中 */
+      background-position: center center;
+      /* 背景图不平铺 */
+      background-repeat: no-repeat;
+      /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+      background-attachment: fixed;
+      /* 让背景图基于容器大小伸缩 */
+      background-size: cover;
+      position: relative;
+    }
+    .download {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      display: block;
+      position: relative;
+      width: 209px;
+      height: 44px;
+      z-index: 1001;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 44px;
+      text-align: center;
+      text-decoration: none;
+      background: transparent;
+    }
+    .title {
+      margin-top: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; 
+      width: 230px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title p {
+      color: #fff;
+      font-size: 20px;
+    }
+    .title img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">
+    <img src="logo.png" alt="">
+    <p>Xiaoyu Supervisor</p>
+  </div>
+  <button type="submit" class="download" onclick="location='itms-services://?action=download-manifest&url=https://api.vrbig.com/assets/img/ios/xiaoyu.plist'">Official version of iOS</button>
+</body>
+</html>
